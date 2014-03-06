@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0055)http://ubuntuforums.org/archive/index.php/t-847859.html -->
+<HTML xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
+	<META name="keywords" content=" Simple mysql++ application, ubuntu forums,ubuntu linux,ubuntu,linux forum,ubuntu forum,linux ubuntu,ubuntu support,ubuntu help,ubuntu linux help">
+	<META name="description" content="[Archive]  Simple mysql++ application Programming Talk">
+	
+	<TITLE> Simple mysql++ application [Archive]  - Ubuntu Forums</TITLE>
+	<LINK rel="stylesheet" type="text/css" href="./Simple mysql++ application [Archive] - Ubuntu Forums_files/archive.css">
+</HEAD><BODY>
+<DIV class="pagebody">
+<DIV id="navbar"><A href="http://ubuntuforums.org/archive/index.php">Ubuntu Forums</A> &gt; <A href="http://ubuntuforums.org/archive/index.php/f-130.html">The Ubuntu Forum Community</A> &gt; <A href="http://ubuntuforums.org/archive/index.php/f-125.html">Other Community Discussions</A> &gt; <A href="http://ubuntuforums.org/archive/index.php/f-310.html">Development &amp; Programming</A> &gt; <A href="http://ubuntuforums.org/archive/index.php/f-39.html">Programming Talk</A> &gt;  Simple mysql++ application</DIV>
+<HR>
+<DIV class="pda"><A href="http://ubuntuforums.org/archive/index.php/t-847859.html?pda=1" rel="nofollow">PDA</A></DIV>
+<P class="largefont">View Full Version : <A href="http://ubuntuforums.org/showthread.php?t=847859">Simple mysql++ application</A></P>
+<HR>
+
+<DIV class="post"><DIV class="posttop"><DIV class="username">Khao</DIV><DIV class="date">July 2nd, 2008, 11:52 PM</DIV></DIV><DIV class="posttext">I&#39;m trying to use the mysql++ api to make a c++ program using it.<BR>
+<BR>
+I got the api using only apt-get install libmysql++-dev<BR>
+and I think that&#39;s all I need for it.<BR>
+<BR>
+Then there&#39;s my test file (only to test if the include works )<BR>
+<BR>
+#include &lt;stdio.h&gt;<BR>
+#include &lt;mysql++/mysql++.h&gt;<BR>
+<BR>
+int main()<BR>
+{<BR>
+int x = 2;<BR>
+}<BR>
+<BR>
+<BR>
+But it doesn&#39;t really work.. I&#39;m not very good with gcc and compiling so I was looking around the forums and found a line that looked like it was working but it isn&#39;t.<BR>
+gcc -I/usr/include/mysql -I/usr/include/mysql++ -c MysqlTest.cpp -o MysqlTest<BR>
+It creates the file, then I chmod it to have execute permission and it says &#39;cannot execute binary file&#39;<BR>
+Now I have no idea why it would make a binary file :\<BR>
+If I try to compile using only gcc MysqlTest.cpp it gives me a loooong list of errors with a ton of &#39;was not declared in this scope&#39;<BR>
+<BR>
+I&#39;m good at programming but I don&#39;t understand much of how compiling and linking works so be easy on me :P</DIV></DIV><HR>
+
+
+<DIV class="post"><DIV class="posttop"><DIV class="username">LaRoza</DIV><DIV class="date">July 3rd, 2008, 01:48 AM</DIV></DIV><DIV class="posttext">Remove the &quot;-c&quot; flag, which tells it to only compile and not link.</DIV></DIV><HR>
+
+
+<DIV class="post"><DIV class="posttop"><DIV class="username">Khao</DIV><DIV class="date">July 3rd, 2008, 09:14 AM</DIV></DIV><DIV class="posttext">Ok this helped me and I now managed to compile it with the library included!<BR>
+But I get stuck on another problem.. When I try to make a mysqlpp connection it doesn&#39;t work!<BR>
+Here&#39;s the code :<BR>
+<BR>
+#include &lt;mysql++.h&gt;<BR>
+<BR>
+int main()<BR>
+{<BR>
+mysqlpp::Connection conn(false);<BR>
+}<BR>
+<BR>
+<BR>
+mysqlpp::Connection conn(false); comes right from the mysqp++ example files<BR>
+<BR>
+and here&#39;s the error output :<BR>
+<BR>
+/tmp/cccp4IsT.o: In function `main&#39;:<BR>
+MysqlTest.cpp:(.text+0xad): undefined reference to `mysqlpp::Connection::Connection(bool)&#39;<BR>
+MysqlTest.cpp:(.text+0xbb): undefined reference to `mysqlpp::Connection::~Connection()&#39;<BR>
+collect2: ld returned 1 exit status<BR>
+<BR>
+Anybody knows what&#39;s the problem?</DIV></DIV><HR>
+
+
+<DIV class="post"><DIV class="posttop"><DIV class="username">Zugzwang</DIV><DIV class="date">July 3rd, 2008, 09:20 AM</DIV></DIV><DIV class="posttext">You should definitely look at the &quot;stickies&quot;, they tell you about linking and compiling.<BR>
+<BR>
+In this case, you have to add &quot;-lmysqlpp&quot; to your compiling command since the header files you included just contains the declarations of the functions but does not tell the linker where the definitions are. This is done by telling the linker to include the library &quot;/usr/lib/libmysqlpp.so&quot; which is what this option does.</DIV></DIV><HR>
+
+
+<DIV class="post"><DIV class="posttop"><DIV class="username">Khao</DIV><DIV class="date">July 3rd, 2008, 09:52 AM</DIV></DIV><DIV class="posttext">Woot thanks! :D It took me a few tries but I finally got it! It helped a lot that you told me I needed -lmysqlpp, I then found out I had to add -L/usr/lib since libmysqlpp.so is located in there. If it can help anyone I&#39;m going to post the line used to compile : <BR>
+<BR>
+g++ -I../include -I/usr/include/mysql -I/usr/include/mysql++ -L/usr/lib -lmysqlpp Server.cpp -o Server</DIV></DIV><HR>
+
+
+<DIV class="post"><DIV class="posttop"><DIV class="username">dwhitney67</DIV><DIV class="date">July 3rd, 2008, 12:49 PM</DIV></DIV><DIV class="posttext">You shouldn&#39;t have had to specify the -L/usr/lib.<BR>
+<BR>
+(Edited because the statement, marked in red font, is not true.  /usr/lib is a trusted directory known by &#39;ldconfig&#39;.  It does not need to appear in /etc/ld.so.conf.<BR>
+That directory is already specified /etc/ld.so.conf (or thereabouts).)<BR>
+<BR>
+Anyhow, if you are &quot;tired&quot; of typing long g++ statements, consider using a Makefile.  Here&#39;s one that you can use to build your application:<BR>
+MYSQL_INC := $(shell mysql_config --include)<BR>
+MYSQL_LIB := $(shell mysql_config --libs)<BR>
+<BR>
+CXXFLAGS = -Wall -pedantic <BR>
+<BR>
+INCPATH  = $(MYSQL_INC) -I/usr/include/mysql++<BR>
+<BR>
+SRC      = Server.cpp <BR>
+OBJ      = $(SRC:.cpp=.o)<BR>
+EXE      = Server<BR>
+<BR>
+$(EXE): $(OBJ)<BR>
+        $(CXX) $(MYSQL_LIB) $^ -o $@<BR>
+<BR>
+.cpp.o:<BR>
+        $(CXX) $(CXXFLAGS) $(INCPATH) -c $&lt; -o $@<BR>
+<BR>
+clean:<BR>
+        $(RM) $(OBJ)<BR>
+<BR>
+cleanall: clean<BR>
+        $(RM) $(EXE)<BR>
+Save this code into a file called Makefile, then run &#39;make&#39;.  If you copy/paste from this posting, make sure that you preserve the tab-spaces.  Makefiles are very particular about spacings.</DIV></DIV><HR>
+
+
+<DIV class="post"><DIV class="posttop"><DIV class="username">Khao</DIV><DIV class="date">July 3rd, 2008, 04:40 PM</DIV></DIV><DIV class="posttext">Thanks I will try this!<BR>
+I already know what those makefiles are, I just didn&#39;t know how to use them.<BR>
+And anyway I don&#39;t have to copy the whole command everytime I compile since I made myself a little bash script to do this :P</DIV></DIV><HR>
+
+
+<DIV class="post"><DIV class="posttop"><DIV class="username">apocalypse_m</DIV><DIV class="date">July 26th, 2008, 10:32 PM</DIV></DIV><DIV class="posttext">I recently also had this problem and this post helped me a lot. I did notice however that /usr/lib was not in the general area of my /etc/ld.so.conf<BR>
+<BR>
+I&#39;m guessing this was also the problem Khao had which caused him to need to use -L/usr/lib in his compilation line.<BR>
+<BR>
+The solution for anyone new to this is obviously to add the line /use/lib to a .conf file in the whereabouts of /etc/ld.so.conf (ie in there or where it is including from). Please someone correct me if it is wrong to do this (I&#39;m fairly new to some of this linux stuff myself)<BR>
+<BR>
+Just thought I&#39;d add my findings in case anyone else stumbles across this in their search to get code using mysql++ to compiling.</DIV></DIV><HR>
+
+
+<DIV class="post"><DIV class="posttop"><DIV class="username">dwhitney67</DIV><DIV class="date">July 26th, 2008, 10:56 PM</DIV></DIV><DIV class="posttext">I was wrong to state that /usr/lib should be in the /etc/ld.so.conf file.  The /usr/lib and /lib directories are &quot;trusted&quot; directories, that are automatically examined when the &#39;ldconfig&#39; command is invoked.<BR>
+<BR>
+Thus it is not necessary to specify /usr/lib when linking your application.  Now, if you add a new library to /usr/lib and fail to run &#39;ldconfig&#39; afterwards, then there would be a (temporary) reason to specify the -L/usr/lib linker option.<BR>
+<BR>
+P.S.  &#39;ldconfig&#39; is generally invoked during system start-up, and can also be done manually (with root-permission).  Usually when installing an application using apt-get, &#39;ldconfig&#39; is the last step that is run.</DIV></DIV><HR>
+
+
+<DIV id="copyright">vBulletin&reg; v3.8.1, Copyright &copy;2000-2009, Jelsoft Enterprises Ltd.</DIV>
+</DIV>
+
+
+
+
+
+
+</BODY></HTML>

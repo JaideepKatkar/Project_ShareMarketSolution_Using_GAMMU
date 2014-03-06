@@ -1,0 +1,44 @@
+<%@ page import="java.sql.*;"%>
+<%
+String registerName = request.getParameter("registerName");
+String registerPwd = request.getParameter("registerPwd");
+String registerAddress = request.getParameter("address");
+String registerPhone = request.getParameter("phone");
+String url = "jdbc:mysql://localhost/sms" ; //"jdbc:postgresql:axn";
+Connection con = null;
+Statement st = null;
+ResultSet rs = null;
+
+
+try
+{
+	out.println("OK  ::: "+url+"\n");
+	Class.forName("com.mysql.jdbc.Driver");
+	out.println("OK  ::: \n");
+	
+	con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sms","root","fedora");
+	out.println("OK  ::: "+con + "\n");
+}catch(Exception e)
+{
+	out.println(e);
+}	
+
+/*try
+{
+	st = con.createStatement();
+	con.setAutoCommit(false);
+	st.executeUpdate("insert into login (username,password) values('"+registerName+"','"+registerPwd+"')");
+	con.commit();
+	con.setAutoCommit(false);
+	st.executeUpdate("insert into registration (username,phno,address) values('"+registerName+"','"+registerPhone+"','"+registerAddress+"')");
+	con.commit();
+	
+	//System.out.println("user inserted...");
+	response.sendRedirect("RegisterMeSuccess.jsp");
+}
+catch(Exception e)
+{
+	out.println(e);
+	//response.sendRedirect("RegisterMe.jsp");
+}*/
+%>

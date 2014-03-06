@@ -1,0 +1,31 @@
+Tue 2008/01/01 21:12:16 : Starting GAMMU smsd
+Tue 2008/01/01 21:12:16 : PIN code is "1234"
+Tue 2008/01/01 21:12:16 : commtimeout=1, sendtimeout=10, receivefrequency=0, resetfrequency=0
+Tue 2008/01/01 21:12:16 : deliveryreport = no
+Tue 2008/01/01 21:12:16 : phoneid = 
+Tue 2008/01/01 21:12:16 : Starting communication
+Tue 2008/01/01 21:12:49 : Starting GAMMU smsd
+Tue 2008/01/01 21:12:49 : PIN code is "1234"
+Tue 2008/01/01 21:12:49 : commtimeout=1, sendtimeout=10, receivefrequency=0, resetfrequency=0
+Tue 2008/01/01 21:12:49 : deliveryreport = no
+Tue 2008/01/01 21:12:49 : phoneid = 
+Tue 2008/01/01 21:12:49 : Starting communication
+Tue 2008/01/01 21:12:58 : Error at init connection (4)
+Tue 2008/01/01 21:12:58 : Terminating communication (4,250)
+Tue 2008/01/01 21:12:58 : Starting communication
+Tue 2008/01/01 21:13:08 : Error at init connection (4)
+Tue 2008/01/01 21:13:08 : Terminating communication (4,250)
+Tue 2008/01/01 21:13:08 : Starting communication
+Tue 2008/01/01 21:13:18 : Error at init connection (4)
+Tue 2008/01/01 21:13:18 : Terminating communication (4,250)
+Tue 2008/01/01 21:13:18 : Starting communication
+Tue 2008/01/01 21:13:28 : Error at init connection (4)
+Tue 2008/01/01 21:13:28 : Terminating communication (4,250)
+Tue 2008/01/01 21:13:58 : Starting communication
+Tue 2008/01/01 21:14:08 : Error at init connection (4)
+Tue 2008/01/01 21:14:08 : Terminating communication (4,250)
+Tue 2008/01/01 21:14:17 : Error getting SMS (21)
+Tue 2008/01/01 21:14:38 : Starting communication
+Tue 2008/01/01 21:14:42 : Reset return code: ERROR (21) 
+Tue 2008/01/01 21:18:19 : Error getting send status of 35 (27): Unknown error.
+Tue 2008/01/01 21:18:35 : Transmitted 35 (total: 1) to +919960612793

@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0059)http://src.enomaly.com/wiki/Documentation/InstallationGuide -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><!-- Custom match templates go here --><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <TITLE>
+      Documentation/InstallationGuide &ndash; ECP
+    </TITLE>
+        <LINK rel="search" href="http://src.enomaly.com/search">
+        <LINK rel="help" href="http://src.enomaly.com/wiki/TracGuide">
+        <LINK rel="alternate" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide?format=txt" type="text/x-trac-wiki" title="Plain Text">
+        <LINK rel="up" href="http://src.enomaly.com/wiki/Documentation" title="View parent page">
+        <LINK rel="start" href="http://src.enomaly.com/wiki">
+        <LINK rel="stylesheet" href="./Documentation InstallationGuide – ECP_files/trac.css" type="text/css"><LINK rel="stylesheet" href="./Documentation InstallationGuide – ECP_files/wiki.css" type="text/css"><LINK rel="stylesheet" href="./Documentation InstallationGuide – ECP_files/pydotorg.css" type="text/css">
+        <LINK rel="shortcut icon" href="http://src.enomaly.com/chrome/common/trac.ico" type="image/x-icon">
+        <LINK rel="icon" href="http://src.enomaly.com/chrome/common/trac.ico" type="image/x-icon">
+      <LINK type="application/opensearchdescription+xml" rel="search" href="http://src.enomaly.com/search/opensearch" title="Search ECP">
+    <SCRIPT type="text/javascript" src="./Documentation InstallationGuide – ECP_files/jquery.js"></SCRIPT><SCRIPT type="text/javascript" src="./Documentation InstallationGuide – ECP_files/trac.js"></SCRIPT><SCRIPT type="text/javascript" src="./Documentation InstallationGuide – ECP_files/search.js"></SCRIPT>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <SCRIPT type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor("Link to this section");
+      });
+    </SCRIPT>
+  <LINK rel="stylesheet" type="text/css" href="./Documentation InstallationGuide – ECP_files/trac(1).css"></HEAD><BODY>
+    <DIV id="banner">
+      <DIV id="header">
+        <A id="logo" href="http://src.enomaly.com/"><IMG src="./Documentation InstallationGuide – ECP_files/banner_new_08.gif" alt="Enomaly ECP"></A>
+      </DIV>
+      <FORM id="search" action="http://src.enomaly.com/search" method="get">
+        <DIV>
+          <LABEL for="proj-search">Search:</LABEL>
+          <INPUT type="text" id="proj-search" name="q" size="18" value="">
+          <INPUT type="submit" value="Search">
+        </DIV>
+      </FORM>
+      <DIV id="metanav" class="nav">
+    <UL>
+      <LI class="first"><A href="http://src.enomaly.com/login">Login</A></LI><LI><A href="http://src.enomaly.com/prefs">Preferences</A></LI><LI class="last"><A href="http://src.enomaly.com/register">Register</A></LI>
+    </UL>
+  </DIV>
+    </DIV>
+    <DIV id="mainnav" class="nav">
+    <UL>
+      <LI class="first active"><A href="http://src.enomaly.com/wiki">Wiki</A></LI><LI><A href="http://src.enomaly.com/timeline">Timeline</A></LI><LI><A href="http://src.enomaly.com/roadmap">Roadmap</A></LI><LI><A href="http://src.enomaly.com/browser">Browse Source</A></LI><LI><A href="http://src.enomaly.com/report">View Tickets</A></LI><LI><A href="http://src.enomaly.com/search">Search</A></LI><LI><A href="http://src.enomaly.com/wiki/Documentation">Documentation</A></LI><LI class="last"><A href="http://src.enomaly.com/wiki/Download">Download</A></LI>
+    </UL>
+  </DIV>
+    <DIV id="main">
+      <DIV id="ctxtnav" class="nav">
+        <H2>Context Navigation</H2>
+          <UL>
+              <LI class="first"><A href="http://src.enomaly.com/wiki/Documentation">Up</A></LI><LI><A href="http://src.enomaly.com/wiki/WikiStart">Start Page</A></LI><LI><A href="http://src.enomaly.com/wiki/TitleIndex">Index</A></LI><LI><A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide?action=history">History</A></LI><LI class="last"><A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide?action=diff&version=27">Last Change</A></LI>
+          </UL>
+        <HR>
+      </DIV>
+    <DIV id="content" class="wiki">
+      <P class="path noprint">
+        <A class="pathentry" title="View Documentation" href="http://src.enomaly.com/wiki/Documentation">Documentation</A><SPAN class="pathentry sep">/</SPAN><A class="pathentry" title="View Documentation/InstallationGuide" href="./Documentation InstallationGuide – ECP_files/Documentation InstallationGuide – ECP.htm">InstallationGuide</A>
+        <BR style="clear: both">
+      </P>
+      <DIV class="wikipage searchable">
+        
+          <P>
+</P><DIV class="wiki-toc"><H4>Contents</H4><OL><LI><A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#ECPInstallationGuide">ECP Installation Guide</A><OL><LI><A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#Ubuntu7.108.04">Ubuntu 7.10/8.04</A><OL><LI><A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#Pre-Install">Pre-Install</A></LI><LI>
+<A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#BuildingLibvirtforbetterfunctionality">Building Libvirt for better functionality</A></LI><LI>
+<A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#InstallingECP">Installing ECP</A></LI><LI>
+<A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#ConfiguringECP">Configuring ECP</A></LI><LI>
+<A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#ConfiguringVNCAccessforVMs">Configuring VNC Access for VM&#39;s</A></LI><LI>
+<A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#RunningECP">Running ECP</A></LI></OL></LI><LI>
+<A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#RedHatEnterprise5.2CentOS5.2Fedora9">Red Hat Enterprise 5.2 / CentOS 5.2 / Fedora 9</A><OL><LI><A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#Pre-Install1">Pre-Install</A><OL><LI><A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#AllPlatforms">All Platforms</A></LI><LI>
+<A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#RHEL5.2CentOS5.2">RHEL 5.2 / CentOS 5.2</A></LI><LI>
+<A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#Fedora9">Fedora 9</A></LI></OL></LI><LI>
+<A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#HypervisorSelection">Hypervisor Selection</A><OL><LI><A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#XEN">XEN</A></LI><LI>
+<A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#KVMQEMU">KVM/QEMU</A></LI><LI>
+<A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#AllRPMSystems">All RPM Systems</A></LI></OL></LI><LI>
+<A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#ECPInstall">ECP Install</A><OL><LI><A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#ConfiguringECP1">Configuring ECP</A></LI><LI>
+<A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#ConfiguringVNCAccessforVMs1">Configuring VNC Access for VM&#39;s</A></LI><LI>
+<A href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#RunningECP1">Running ECP</A></LI></OL></LI></OL></LI></OL></LI></OL></DIV><P>
+</P>
+<H1 id="ECPInstallationGuide">ECP Installation Guide<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#ECPInstallationGuide" title="Link to this section"> &para;</A></H1>
+<HR>
+<H2 id="Ubuntu7.108.04">Ubuntu 7.10/8.04<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#Ubuntu7.108.04" title="Link to this section"> &para;</A></H2>
+<P>
+This section will guide you through the installation of ECP on Ubuntu 7.10/8.04.
+</P>
+<HR>
+<H3 id="Pre-Install">Pre-Install<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#Pre-Install" title="Link to this section"> &para;</A></H3>
+<UL><LI>Run the following from the command line for XEN install (Note: Xen will work with Ubuntu 7.x, but at this time it will not work with Ubuntu 8.x)
+<DIV class="code"><PRE>sudo apt-get install ssh build-essential python-dev libxen3.1-dev kvm mysql-server <SPAN class="se">\
+</SPAN>libmysqlclient15-dev python-libvirt python-mysqldb libvirt-bin python-setuptools <SPAN class="se">\
+</SPAN>ubuntu-xen-server qemu bridge-utils python-profiler
+sudo mkdir -p /opt
+<SPAN class="nb">cd</SPAN> /opt
+</PRE></DIV></LI></UL><UL><LI>Run the following from the command line for KVM install (recommended setup for all Ubuntu Installs)
+<DIV class="code"><PRE>sudo apt-get install ssh build-essential python-dev libxen3.1-dev kvm mysql-server <SPAN class="se">\
+</SPAN>libmysqlclient15-dev python-libvirt python-mysqldb libvirt-bin python-setuptools <SPAN class="se">\
+</SPAN>qemu bridge-utils 
+sudo mkdir -p /opt
+<SPAN class="nb">cd</SPAN> /opt
+</PRE></DIV></LI></UL><P>
+<STRONG>NOTE:</STRONG> At one point it will ask you to provide a root password for MySQL, please remember this password as it will be used in a later step!
+</P>
+<HR>
+<H3 id="BuildingLibvirtforbetterfunctionality">Building Libvirt for better functionality<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#BuildingLibvirtforbetterfunctionality" title="Link to this section"> &para;</A></H3>
+<UL><LI>You may experience problems with Libvirt under some circumstances.  If you&#39;ve been directed, please install the current snapshot of Libvirt:
+<DIV class="code"><PRE>apt-get install libxml2-dev libgnutls-dev libsasl2-dev libgsasl7-dev libxen3.1-dev
+</PRE></DIV></LI></UL><UL><LI>Manually compiling Libvirt:
+<DIV class="code"><PRE>wget http://libvirt.org/sources/libvirt-0.4.1.tar.gz
+tar -xvzf libvirt-0.4.1.tar.gz
+<SPAN class="nb">cd </SPAN>libvirt-0.4.1
+./configure --prefix<SPAN class="o">=</SPAN>/usr <SPAN class="o">&amp;&amp;</SPAN> make <SPAN class="o">&amp;&amp;</SPAN> make install
+</PRE></DIV></LI></UL><HR>
+<H3 id="InstallingECP">Installing ECP<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#InstallingECP" title="Link to this section"> &para;</A></H3>
+<UL><LI>Download the ECP DEB package from <A class="ext-link" href="https://sourceforge.net/project/showfiles.php?group_id=164855"><SPAN class="icon">SourceForge</SPAN></A>
+</LI><LI>Run the following from the command line:
+<DIV class="code"><PRE>dpkg -i enomalism2-2.2.deb
+</PRE></DIV></LI></UL><HR>
+<H3 id="ConfiguringECP">Configuring ECP<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#ConfiguringECP" title="Link to this section"> &para;</A></H3>
+<UL><LI>If MySQL is running (it should be after following the install steps above) type the following at the command line:
+<DIV class="code"><PRE>scripts/init-db.sh &lt;mysql root password&gt; &lt;new ecp user&gt; &lt;new ecp password&gt;
+</PRE></DIV></LI><LI>Replace <TT>&lt;user&gt;</TT> and <TT>&lt;password&gt;</TT> with usernames and passwords of your choice (without the triangle brackets).
+</LI><LI>Copy the <TT>default.cfg</TT> to <TT>config/$HOSTNAME.cfg</TT> by doing this:
+<DIV class="code"><PRE>cp default.cfg config/<SPAN class="nv">$HOSTNAME</SPAN>.cfg
+</PRE></DIV></LI><LI>Edit <TT>config/$HOSTNAME.cfg</TT>
+<UL><LI>Change <TT> sqlobject.dburi=&quot;mysql://enomalism2:zx45qw12@localhost/enomalism2&quot; </TT> to reflect your proper MySQL username and password.
+</LI><LI>Change <TT> enomalism2.self=&quot;5fe6f05e-7ee0-11dc-ba7c-0011d88b8e81&quot; </TT> to reflect a unique identifier for your cluster environment (each instance needs to be unique)
+</LI><LI>Change <TT> enomalism2.baseurl=&quot;http://127.0.0.1:8080/rest/&quot; </TT> to the IP/hostname you use to access the ECP web interface.&#39;
+</LI><LI>Change <TT> enomalism2.ip_addr=&quot;1.2.3.4&quot; </TT> to the IP/hostname you use to access the ECP web interface, this will be used later for clustering.
+</LI></UL></LI></UL><HR>
+<H3 id="ConfiguringVNCAccessforVMs">Configuring VNC Access for VM&#39;s<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#ConfiguringVNCAccessforVMs" title="Link to this section"> &para;</A></H3>
+<P>
+To access your machines through the built-in VNC client, you need to change the following chunks in the following files:
+</P>
+<UL><LI><TT>/etc/libvirt/qemu</TT>
+<DIV class="code"><PRE><SPAN class="c"># VNC is configured to listen on 127.0.0.1 by default.
+# To make it listen on all public interfaces, uncomment
+# this next option.
+#
+# NB, strong recommendation to enable TLS + x509 certificate
+# verification when allowing public access
+#
+</SPAN><SPAN class="nv">vnc_listen</SPAN> <SPAN class="o">=</SPAN> <SPAN class="s2">&quot;0.0.0.0&quot;</SPAN>
+</PRE></DIV></LI></UL><UL><LI><TT>/etc/xen/xend-config.sxp</TT>
+<DIV class="code"><PRE><SPAN class="c"># The interface for VNC servers to listen on. Defaults
+# to 127.0.0.1  To restore old &#39;listen everywhere&#39; behaviour
+# set this to 0.0.0.0
+</SPAN><SPAN class="o">(</SPAN>vnc-listen <SPAN class="s1">&#39;0.0.0.0&#39;</SPAN><SPAN class="o">)</SPAN>
+</PRE></DIV></LI></UL><UL><LI><STRONG>NOTE:</STRONG> Some installations (KVM only) may not have the second file to edit, don&#39;t panic.  If you&#39;re not using Xen, you will not need it.
+</LI></UL><HR>
+<H3 id="RunningECP">Running ECP<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#RunningECP" title="Link to this section"> &para;</A></H3>
+<UL><LI>Run the following from the prompt
+<DIV class="code"><PRE>scripts/enomalism2.sh start
+</PRE></DIV></LI><LI>If no errors occur point your browser to:  <TT> http://server:8080 </TT>, where <TT>server</TT> is the IP or the hostname of the ECP server.
+</LI><LI>After the install completes, click on the bottom link and log in using
+<UL><LI>username: <I>admin</I>
+</LI><LI>password: <I>password</I>
+</LI></UL></LI></UL><P>
+Done! Welcome to the Enomaly Elastic Computing Platform!
+</P>
+<HR>
+<H2 id="RedHatEnterprise5.2CentOS5.2Fedora9">Red Hat Enterprise 5.2 / CentOS 5.2 / Fedora 9<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#RedHatEnterprise5.2CentOS5.2Fedora9" title="Link to this section"> &para;</A></H2>
+<HR>
+<H3 id="Pre-Install1">Pre-Install<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#Pre-Install1" title="Link to this section"> &para;</A></H3>
+<H4 id="AllPlatforms">All Platforms<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#AllPlatforms" title="Link to this section"> &para;</A></H4>
+<UL><LI>Download <A class="ext-link" href="http://downloads.sourceforge.net/enomalism/enomalism.public"><SPAN class="icon">enomalism.public</SPAN></A> and install it via: <TT> rpm --import enomalism.public </TT>
+</LI><LI>Download <A class="ext-link" href="http://downloads.sourceforge.net/enomalism/enomalism001.pubkey.asc"><SPAN class="icon">enomalism001.pubkey.asc</SPAN></A> and install it via <TT> rpm --import enomalism001.pubkey.asc </TT>
+</LI><LI>Install the 0.4.1 libvirt packages for your platform from  <A class="ext-link" href="http://sourceforge.net/project/showfiles.php?group_id=164855&package_id=272094"><SPAN class="icon">http://sourceforge.net/project/showfiles.php?group_id=164855&amp;package_id=272094</SPAN></A>
+<UL><LI>NOTE: CentOS 5.x packages will work with RHEL 5.x. Fedora 9 must follow the compile instructions below.
+</LI></UL></LI><LI>If the libvirt packages do not match your RPM platform or will not install properly libvirt can be compiled manually (This includes Fedora 9!):
+<DIV class="code"><PRE>yum install libxml2-devel openssl-devel cyrus-sasl-devel xen-devel gnutls-devel gcc
+wget http://libvirt.org/sources/libvirt-0.4.1.tar.gz
+tar -xvzf libvirt-0.4.1.tar.gz
+<SPAN class="nb">cd </SPAN>libvirt-0.4.1
+./configure --prefix<SPAN class="o">=</SPAN>/usr <SPAN class="o">&amp;&amp;</SPAN> make <SPAN class="o">&amp;&amp;</SPAN> make install
+</PRE></DIV></LI></UL><HR>
+<H4 id="RHEL5.2CentOS5.2">RHEL 5.2 / CentOS 5.2<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#RHEL5.2CentOS5.2" title="Link to this section"> &para;</A></H4>
+<UL><LI>After downloading the RPM for your platform from <A class="ext-link" href="http://sourceforge.net/project/showfiles.php?group_id=164855"><SPAN class="icon">SourceForge</SPAN></A>, run the following from the command line:
+<DIV class="code"><PRE>yum install Enomalism2-2.2.2-r4157.noarch.PY2.4.rpm
+</PRE></DIV></LI></UL><HR>
+<H4 id="Fedora9">Fedora 9<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#Fedora9" title="Link to this section"> &para;</A></H4>
+<UL><LI>After downloading the RPM for your platform from <A class="ext-link" href="http://sourceforge.net/project/showfiles.php?group_id=164855"><SPAN class="icon">SourceForge</SPAN></A>, run the following from the command line:
+<DIV class="code"><PRE>yum install Enomalism2-2.2.2-r4157.noarch.PY2.5.rpm
+</PRE></DIV></LI></UL><HR>
+<H3 id="HypervisorSelection">Hypervisor Selection<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#HypervisorSelection" title="Link to this section"> &para;</A></H3>
+<H4 id="XEN">XEN<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#XEN" title="Link to this section"> &para;</A></H4>
+<P>
+For most RPM based distros the following command will install the Xen Hypervisor support:
+</P>
+<DIV class="code"><PRE>yum install kernel-xen xen
+</PRE></DIV><P>
+You may need to modify your /boot/grub/menu.lst to boot from the new Xen kernel.  In that file you should see a list of kernels.  Change the line that says &quot;default=x&quot; to &quot;default=y&quot; where &quot;y&quot; is the position of the Xen kernel in the list (the list starts at 0).  It might look like:
+</P>
+<PRE class="wiki">default=0
+</PRE><HR>
+<H4 id="KVMQEMU">KVM/QEMU<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#KVMQEMU" title="Link to this section"> &para;</A></H4>
+<P>
+For CentOS the following command will install KVM/Qemu support:
+</P>
+<DIV class="code"><PRE>yum install kvm kmod-kvm qemu
+ln -s /usr/bin/qemu-kvm /usr/bin/kvm
+</PRE></DIV><P>
+For Fedora 9:
+</P>
+<DIV class="code"><PRE>yum install kvm qemu
+ln -s /usr/bin/qemu-kvm /usr/bin/kvm
+</PRE></DIV><P>
+RHEL 5.2 does not ship with yum&#39;able KVM or Qemu packages, these can be downloaded and installed manually:
+</P>
+<UL><LI>Install CentOS 5.x Public Key: <TT> rpm --import http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-5 </TT>
+</LI><LI>32 Bit (x86)
+<DIV class="code"><PRE>wget http://mirrors.kernel.org/centos/5.2/extras/i386/RPMS/qemu-0.9.0-4.i386.rpm
+wget http://mirrors.kernel.org/centos/5.2/extras/i386/RPMS/kvm-36-1.i386.rpm
+wget http://mirrors.kernel.org/centos/5.2/extras/i386/RPMS/kmod-kvm-36-2.2.6.18_92.1.10.el5.i686.rpm
+wget http://mirrors.kernel.org/centos/5.2/updates/i386/RPMS/kernel-2.6.18-92.1.10.el5.i686.rpm
+yum install qemu-0.9.0-4.i386.rpm kvm-36-1.i386.rpm kmod-kvm-36-2.2.6.18_92.1.10.el5.i686.rpm kernel-2.6.18-92.1.10.el5.i686.rpm
+ln -s /usr/bin/qemu-kvm /usr/bin/kvm
+</PRE></DIV></LI><LI>64 bit (x86_64)
+<DIV class="code"><PRE>wget http://mirrors.kernel.org/centos/5.2/extras/x86_64/RPMS/qemu-0.9.0-4.x86_64.rpm
+wget http://mirrors.kernel.org/centos/5.2/extras/x86_64/RPMS/kvm-36-1.x86_64.rpm
+wget http://mirrors.kernel.org/centos/5.2/extras/x86_64/RPMS/kmod-kvm-36-2.2.6.18_92.1.10.el5.x86_64.rpm
+wget http://mirrors.kernel.org/centos/5.2/updates/x86_64/RPMS/kernel-2.6.18-92.1.10.el5.x86_64.rpm
+yum install qemu-0.9.0-4.x86_64.rpm kvm-36-1.x86_64.rpm kmod-kvm-36-2.2.6.18_92.1.10.el5.x86_64.rpm kernel-2.6.18-92.1.10.el5.x86_64.rpm
+ln -s /usr/bin/qemu-kvm /usr/bin/kvm
+</PRE></DIV></LI></UL><P>
+This will install a new RH kernel, please reboot after this step.
+</P>
+<HR>
+<H4 id="AllRPMSystems">All RPM Systems<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#AllRPMSystems" title="Link to this section"> &para;</A></H4>
+<UL><LI>Start MySQL from the command line by typing:
+<DIV class="code"><PRE>/etc/init.d/mysqld start
+</PRE></DIV></LI><LI>Set a root password on MySQL (used in later steps)
+<DIV class="code"><PRE>mysqladmin password &lt;password&gt;
+</PRE></DIV></LI><LI>Allow MySQL to start on bootup
+<DIV class="code"><PRE>chkconfig mysqld on
+</PRE></DIV></LI></UL><HR>
+<H3 id="ECPInstall">ECP Install<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#ECPInstall" title="Link to this section"> &para;</A></H3>
+<H4 id="ConfiguringECP1">Configuring ECP<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#ConfiguringECP1" title="Link to this section"> &para;</A></H4>
+<UL><LI>If MySQL is running (it should be after following the install steps above) type the following at the command line:
+<DIV class="code"><PRE><SPAN class="nb">cd</SPAN> /opt/enomalism2
+scripts/init-db.sh &lt;mysql root password&gt; &lt;new ecp user&gt; &lt;new ecp password&gt;
+</PRE></DIV></LI><LI>Replace &lt;user&gt; and &lt;password&gt; with usernames and passwords of your choice (without the triangle brackets).
+</LI><LI>Copy the <TT>default.cfg</TT> to <TT>config/$HOSTNAME.cfg</TT> by doing this
+<DIV class="code"><PRE>cp default.cfg config/<SPAN class="nv">$HOSTNAME</SPAN>.cfg
+</PRE></DIV></LI><LI>Edit <TT>config/$HOSTNAME.cfg</TT>
+<UL><LI>Change <TT> sqlobject.dburi=&quot;mysql://enomalism2:zx45qw12@localhost/enomalism2&quot; </TT> to reflect your proper MySQL username and password.
+</LI><LI>Change <TT> enomalism2.self=&quot;5fe6f05e-7ee0-11dc-ba7c-0011d88b8e81&quot; </TT> to reflect a unique identifier for your cluster environment (each instance needs to be unique)
+<UL><LI>Most distros have a utility such as <I>uuid</I> or <I>uuidgen</I> that can generate a number for you.  The only valid value in this field is a uuid.
+</LI></UL></LI><LI>Change <TT> enomalism2.baseurl=&quot;http://127.0.0.1:8080/rest/&quot; </TT> to the IP/hostname you use to access the ECP web interface.
+</LI><LI>Change <TT> enomalism2.ip_addr=&quot;1.2.3.4&quot; </TT> to the IP/hostname you use to access the ECP web interface, this will be used later for clustering.
+</LI></UL></LI></UL><HR>
+<H4 id="ConfiguringVNCAccessforVMs1">Configuring VNC Access for VM&#39;s<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#ConfiguringVNCAccessforVMs1" title="Link to this section"> &para;</A></H4>
+<P>
+To access your machines through the built-in VNC client, you need to change the following chunks in the following files:
+</P>
+<UL><LI><TT>/etc/libvirt/qemu.conf</TT> (NOTE: If this file is missing or is a directory, you probably did not install the 0.4.1 version of libvirt!)
+<DIV class="code"><PRE><SPAN class="c"># VNC is configured to listen on 127.0.0.1 by default.
+# To make it listen on all public interfaces, uncomment
+# this next option.
+#
+# NB, strong recommendation to enable TLS + x509 certificate
+# verification when allowing public access
+#
+</SPAN><SPAN class="nv">vnc_listen</SPAN> <SPAN class="o">=</SPAN> <SPAN class="s2">&quot;0.0.0.0&quot;</SPAN>
+</PRE></DIV></LI></UL><UL><LI><TT>/etc/xen/xend-config.sxp</TT>
+<DIV class="code"><PRE><SPAN class="c"># The interface for VNC servers to listen on. Defaults
+# to 127.0.0.1  To restore old &#39;listen everywhere&#39; behaviour
+# set this to 0.0.0.0
+</SPAN><SPAN class="o">(</SPAN>vnc-listen <SPAN class="s1">&#39;0.0.0.0&#39;</SPAN><SPAN class="o">)</SPAN>
+</PRE></DIV></LI></UL><UL><LI>NOTE: Some installations (KVM only) may not have the second file to edit, don&#39;t panic.  If you&#39;re not using Xen, you will not need it.
+</LI></UL><HR>
+<H4 id="RunningECP1">Running ECP<A class="anchor" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide#RunningECP1" title="Link to this section"> &para;</A></H4>
+<UL><LI>Run the following from the prompt
+<DIV class="code"><PRE>/etc/init.d/enomalism2.sh start
+</PRE></DIV></LI><LI>If no errors occur point your browser to:  <TT> http://server:8080 </TT>, where <TT>server</TT> is the IP or the hostname of the ECP server.
+</LI><LI>After the install completes, click on the bottom link and log in using
+<UL><LI>username: <I>admin</I>
+</LI><LI>password: <I>password</I>
+</LI></UL></LI><LI>You can stop ECP by typing
+<DIV class="code"><PRE>/etc/init.d/enomalism2.sh stop
+</PRE></DIV></LI></UL><P>
+Done! Welcome to the Enomaly Elastic Computing Platform!
+</P>
+
+        
+        
+      </DIV>
+    </DIV>
+    <SCRIPT type="text/javascript">
+        jQuery.loadStyleSheet("/pygments/trac.css", "text/css");
+    </SCRIPT>
+    <DIV id="altlinks">
+      <H3>Download in other formats:</H3>
+      <UL>
+        <LI class="last first">
+          <A rel="nofollow" href="http://src.enomaly.com/wiki/Documentation/InstallationGuide?format=txt">Plain Text</A>
+        </LI>
+      </UL>
+    </DIV>
+    </DIV>
+    <DIV id="footer" lang="en" xml:lang="en"><HR>
+      <A id="tracpowered" href="http://trac.edgewall.org/"><IMG src="./Documentation InstallationGuide – ECP_files/trac_logo_mini.png" height="30" width="107" alt="Trac Powered"></A>
+      <P class="left">
+        Powered by <A href="http://src.enomaly.com/about"><STRONG>Trac 0.11.3</STRONG></A><BR>
+        By <A href="http://www.edgewall.org/">Edgewall Software</A>.
+      </P>
+      <P class="right">Visit the Trac open source project at<BR><A href="http://trac.edgewall.org/">http://trac.edgewall.org/</A></P>
+    </DIV>
+  
+
+
+
+
+
+</BODY></HTML>
